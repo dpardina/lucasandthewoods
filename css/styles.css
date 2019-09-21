@@ -398,12 +398,12 @@ form .disclaimer {
 /* Botón Subir */
 .topBtn {
   position: fixed;
-  bottom: 40px;
-  right: 40px;
-  font-size: 22px;
-  width: 50px;
-  height: 50px;
-  background: #e3207b;
+  bottom: 2rem;
+  right: 2rem;
+  font-size: 1rem;
+  width: 2rem;
+  height: 2rem;
+  background: #cf1a6f;
   color: #FFF;
   border: none;
   cursor: pointer;
