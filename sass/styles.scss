@@ -1,3 +1,5 @@
+/* Archivos */
+@import 'colors';
 /* Fuentes */
 @import url('https://fonts.googleapis.com/css?family=Muli:300,400,700,900&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Crimson+Pro&display=swap');
@@ -12,7 +14,7 @@ body::-webkit-scrollbar {
 body {
     font-family: 'Muli', sans-serif;
     font-weight: 400;
-    background: #222831;
+    background: $background;
 }
 /* Fin General */
 /* Menú */
@@ -23,24 +25,24 @@ body {
         transition: 0.5s;
     }
     .navbar-toggler {
-        border-color: #e3207b;
+        border-color: $details;
         float: right;
         .navbar-toggler-icon {
             background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
         }
     }
     button:focus {
-        outline: 5px auto #cf1a6f;
+        outline: 5px auto $darkerdetails;
     }
     .navbar-nav {
         .nav-link span {
-            color: #FFF;
+            color: $primary;
             position: relative;
             transition: 0.2s;
             font-size: 1.1rem;
             font-weight: 700;
             &:hover {
-                color: #FFF;
+                color: $primary;
                 &:after {
                     width: 100%;
                     position: absolute;
@@ -52,7 +54,7 @@ body {
                 display: inline-block;
                 left: 0;
                 bottom: -0.5rem;
-                background-color: #e3207b;
+                background-color: $details;
                 width: 0;
                 height: 0.25rem;
                 transition: all 0.4s;
@@ -68,10 +70,10 @@ body {
             border-radius: 50%;
             text-decoration: none;
             font-size: 1.3em;
-            color: #FFF;
+            color: $primary;
             transition: 0.5s;
             &:hover {
-                color: #e3207b;       
+                color: $details;       
                 &:before {
                     transform: scale(1);
                 }
@@ -83,7 +85,7 @@ body {
                 left: 0;
                 right: 0;
                 bottom: 0;
-                background: #FFF;
+                background: $primary;
                 border-radius: 50%;
                 z-index: -1;
                 transform: scale(0);
@@ -108,7 +110,7 @@ body {
     h1 {
         font-family: 'Crimson Pro', serif;
         font-weight: 400;
-        color: #fff;
+        color: $primary;
         font-size: 4rem;
         letter-spacing: .1em;
         text-transform: uppercase;
@@ -117,7 +119,7 @@ body {
     }
     h2 {
         font-family: 'Cabin', sans-serif;
-        color: #fff;
+        color: $primary;
         font-size: 2.5rem;
         line-height: 1.5;
         text-shadow: 4px 4px #0000004f;
@@ -126,15 +128,15 @@ body {
         animation: fade-in 2s cubic-bezier(0.390, 0.575, 0.565, 1.000) 1.8s both;
     }
     p {
-        color: #fff;
+        color: $primary;
         font-size: 1.5rem;
         line-height: 1.5;
         text-shadow: 4px 4px #0000004f;
         animation: fade-in 2s cubic-bezier(0.390, 0.575, 0.565, 1.000) 1.8s both;
         i {
-            color: #FFF;
+            color: $primary;
             &:hover {
-                color: #e3207b;
+                color: $details;
             }
         }
     }
@@ -169,7 +171,7 @@ body {
             font-size: 2rem;
             letter-spacing: .2em;
             text-transform: uppercase;
-            color: #fff;
+            color: $primary;
             font-weight: 700;
             position: relative;
             padding-bottom: 0.6rem;
@@ -181,46 +183,46 @@ body {
                 right: 25%;
                 width: 50%;
                 height: 3px;
-                background: #e3207b;
+                background: $details;
             }
         }
         p {
-            color: #FFF;
+            color: $primary;
             padding: 0 0.3rem;
         }
     }
 }
 .bg-darker {
-    background: #13171D;
+    background: $darkerbackground;
 }
 /*Fin Secciones */
 /* Tour */
 .card {
     border: none;
     border-radius: 0;
-    background-color: #000;
+    background-color: $secondary;
     .card-img-top {
         border-radius: 0;
     }
     h4 {
-        background-color: #e3207b;
-        color: #FFF;
+        background-color: $details;
+        color: $primary;
         margin: 0;
     }
     .tour-specific {
-        color: #FFF;
+        color: $primary;
     }
     .btn {
         position: relative;
-        background-color: #FFF;
-        border-color: #e3207b;
+        background-color: $primary;
+        border-color: $details;
         border-radius: 0;
-        color: #e3207b;
+        color: $details;
         transition: 0.5s;
         font-weight: 700;
         &:hover {
-            background-color: #e3207b;
-            color: #FFF;
+            background-color: $details;
+            color: $primary;
         }
     }
 }
@@ -252,7 +254,7 @@ body {
         transition: .5s all ease;
         opacity: 0;
         visibility: hidden;
-        color: #fff;
+        color: $primary;
     }
     &:before {
         position: absolute;
@@ -292,7 +294,7 @@ body {
         z-index: 4;
     }
     .social-icon-member {
-        color: #FFF;
+        color: $primary;
     }
 }
 /* Fin Bio */
@@ -313,21 +315,21 @@ body {
                 bottom: 0;
                 margin: 0;
                 padding: 0.5rem;
-                background-color: #000;
-                color: #FFF;
+                background-color: $secondary;
+                color: $primary;
             }
         }   
         .albums-link {
             text-decoration: none;
             transition: 0.5s;
             &:focus {
-                outline: 5px auto #cf1a6f;
+                outline: 5px auto $darkerdetails;
             }
             h4 {
                 color: #FFF;
-                background-color: #e3207b;
+                background-color: $details;
                 &:hover {
-                    background-color: #cf1a6f;
+                    background-color: $darkerdetails;
                 }
             }
         }
@@ -340,23 +342,23 @@ body {
 /* Novedades */
 form {
     .form-control {
-        border: 1px solid #e3207b;
+        border: 1px solid $details;
     }
     .btn {
         position: relative;
-        background-color: #FFF;
-        border-color: #e3207b;
+        background-color: $primary;
+        border-color: $details;
         border-radius: 0;
-        color: #e3207b;
+        color: $details;
         transition: 0.5s;
         font-weight: 700;
         &:hover {
-            background-color: #e3207b;
-            color: #FFF;
+            background-color: $details;
+            color: $primary;
         }
     }
     .disclaimer {
-        color: #FFF;
+        color: $primary;
         font-size: 0.7rem;
         text-align: justify;
     }
@@ -364,25 +366,25 @@ form {
 /* Fin Novedades */
 /* Footer */
 .footer-divider {
-    background-color: #e3207b;
+    background-color: $details;
     .divider-social-icon {
         font-size: 1.2rem;
         color: #FFF;
         &:hover {
-            background: #cf1a6f;
+            background: $darkerdetails;
         }
     }
 }
 .footer-bg {
-    background-color: #222831;
+    background-color: $background;
     .footer-band-name {
-        color: #FFF;
+        color: $primary;
         font-family: 'Crimson Pro', serif;
         letter-spacing: .1em;
         text-transform: uppercase;
     }
     .copyright {
-        color: #FFF;
+        color: $primary;
     }
 }
 /* Fin Footer */
@@ -394,8 +396,8 @@ form {
     font-size: 0.8rem;
     width: 1.5rem;
     height: 1.5rem;
-    background: #cf1a6f;
-    color: #FFF;
+    background: $darkerdetails;
+    color: $primary;
     border: none;
     cursor: pointer;
     display: none;
